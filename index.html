@@ -3,10 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon premier site</title>
+    <title>LALLO Jewelry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .hero {
+            background: url('https://source.unsplash.com/1600x900/?jewelry') no-repeat center center/cover;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px;
+        }
+        .product {
+            background: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: black;
+            color: white;
+            text-decoration: none;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        footer {
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bienvenue sur mon site web !</h1>
-    <p>Mon site est maintenant en ligne avec GitHub Pages 🚀.</p>
+    <header>LALLO Jewelry</header>
+    <section class="hero">Élégance & Raffinement</section>
+    <section class="products">
+        <div class="product">
+            <img src="https://source.unsplash.com/400x300/?bracelet" alt="Bracelet">
+            <h3>Bracelet Luxe</h3>
+            <p>Un bracelet en or fin pour un look raffiné.</p>
+            <a href="#" class="btn">Acheter</a>
+        </div>
+        <div class="product">
+            <img src="https://source.unsplash.com/400x300/?ring" alt="Bague">
+            <h3>Bague Élégante</h3>
+            <p>Une bague scintillante pour sublimer votre main.</p>
+            <a href="#" class="btn">Acheter</a>
+        </div>
+        <div class="product">
+            <img src="https://source.unsplash.com/400x300/?earrings" alt="Boucles d'oreilles">
+            <h3>Boucles d'oreilles</h3>
+            <p>Un accessoire chic pour toutes les occasions.</p>
+            <a href="#" class="btn">Acheter</a>
+        </div>
+    </section>
+    <footer>© 2025 LALLO Jewelry - Tous droits réservés</footer>
 </body>
 </html>
+
