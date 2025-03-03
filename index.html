@@ -5,44 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LALLO Jewelry</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
-
         body {
             font-family: "Playfair Display", serif;
             margin: 0;
             padding: 0;
-            background-color: #F8F8F8; /* Blanc sale */
-            color: #2C2C2C;
+            background-color: #F8F4F0;
+            color: #4E3629;
             display: none;
         }
-        
         .splash-screen {
             position: fixed;
-            top: 0;
-            left: 0;
             width: 100%;
-            height: 100%;
-            background: #FFFFFF;
+            height: 100vh;
+            background: #FDFCFB;
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 1000;
+            z-index: 9999;
         }
-
         .splash-screen img {
             width: 200px;
         }
-        
         header {
-            background-color: #FFFFFF;
-            color: #2C2C2C;
+            background-color: #EDEAE5;
+            color: #4E3629;
             padding: 20px;
             text-align: center;
             font-size: 24px;
             font-weight: bold;
             position: relative;
         }
-
+        header img {
+            width: 150px;
+            display: block;
+            margin: 0 auto 10px;
+        }
         .menu {
             position: absolute;
             top: 20px;
@@ -50,69 +47,48 @@
             cursor: pointer;
             font-size: 24px;
         }
-        
         .menu-content {
             display: none;
             position: absolute;
             right: 20px;
-            background: #FFFFFF;
+            background: #F8F4F0;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             list-style: none;
             padding: 10px;
             border-radius: 5px;
         }
-        
         .menu:hover .menu-content {
             display: block;
         }
-        
         .hero {
             background: url('banner.jpg') no-repeat center center/cover;
             height: 70vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #2C2C2C;
+            color: #4E3629;
             text-align: center;
             font-size: 2em;
             font-weight: bold;
         }
-        
-        .products, .sales, .gift-box {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 40px;
-        }
-        
-        .product, .sale-item, .gift-item {
-            background: white;
-            padding: 20px;
+        .about {
             text-align: center;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+            padding: 40px;
+            font-size: 1.2em;
         }
-        
-        .product img, .sale-item img, .gift-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-        
         .btn {
             display: inline-block;
             padding: 10px 20px;
-            background: #2C2C2C;
+            background: #8B5A2B;
             color: white;
             text-decoration: none;
             margin-top: 10px;
             border-radius: 5px;
             font-weight: bold;
         }
-        
         footer {
-            background: #FFFFFF;
-            color: #2C2C2C;
+            background: #EDEAE5;
+            color: #4E3629;
             text-align: center;
             padding: 10px;
             margin-top: 20px;
@@ -120,20 +96,20 @@
         }
     </style>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        window.onload = function() {
             setTimeout(function() {
-                document.querySelector(".splash-screen").style.display = "none";
-                document.body.style.display = "block";
+                document.querySelector('.splash-screen').style.display = 'none';
+                document.body.style.display = 'block';
             }, 5000);
-        });
+        };
     </script>
 </head>
 <body>
     <div class="splash-screen">
-        <img src="logo.jpg" alt="LALLO Jewelry Logo">
+        <img src="Black and Beige Aesthetic Minimalist Cosmetics Beauty Brand Logo (2).jpg" alt="LALLO Jewelry Logo">
     </div>
-    
     <header>
+        <img src="Black and Beige Aesthetic Minimalist Cosmetics Beauty Brand Logo (2).jpg" alt="LALLO Jewelry Logo">
         LALLO Jewelry
         <div class="menu">⋮
             <ul class="menu-content">
@@ -145,18 +121,16 @@
             </ul>
         </div>
     </header>
-    
     <section class="hero">Élégance & Raffinement</section>
-    
+    <section id="about" class="about">
+        <h2>À Propos</h2>
+        <p>Bienvenue chez LALLO Jewelry, votre destination pour des bijoux élégants et raffinés.</p>
+        <a href="#products" class="btn">Découvrir nos collections</a>
+    </section>
     <footer>
         <p id="contact">Contactez-nous : contact@lallojewelry.com</p>
         <p>📞 +216 56 611 292 / +216 27 175 778</p>
-        <p id="about">À Propos : Découvrez notre histoire.</p>
         © 2025 LALLO Jewelry - Tous droits réservés
     </footer>
 </body>
 </html>
-
-
-
-
