@@ -18,9 +18,34 @@
             text-align: center;
             font-size: 24px;
             font-weight: bold;
+            position: relative;
+        }
+        header img {
+            width: 150px;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        .menu {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            font-size: 24px;
+        }
+        .menu-content {
+            display: none;
+            position: absolute;
+            right: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            list-style: none;
+            padding: 10px;
+        }
+        .menu:hover .menu-content {
+            display: block;
         }
         .hero {
-            background: url('https://source.unsplash.com/1600x900/?jewelry') no-repeat center center/cover;
+            background: url('banner.jpg') no-repeat center center/cover;
             height: 70vh;
             display: flex;
             align-items: center;
@@ -30,19 +55,19 @@
             font-size: 2em;
             font-weight: bold;
         }
-        .products {
+        .products, .sales, .gift-box {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
             padding: 40px;
         }
-        .product {
+        .product, .sale-item, .gift-item {
             background: white;
             padding: 20px;
             text-align: center;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .product img {
+        .product img, .sale-item img, .gift-item img {
             width: 100%;
             height: auto;
         }
@@ -65,31 +90,52 @@
     </style>
 </head>
 <body>
-    <header>LALLO Jewelry</header>
+    <header>
+        <img src="Black and Beige Aesthetic Minimalist Cosmetics Beauty Brand Logo (2).jpg" alt="LALLO Jewelry Logo">
+        LALLO Jewelry
+        <div class="menu">⋮
+            <ul class="menu-content">
+                <li><a href="#products">Collections</a></li>
+                <li><a href="#sales">Soldes</a></li>
+                <li><a href="#gift-box">Box Cadeau</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">À Propos</a></li>
+            </ul>
+        </div>
+    </header>
     <section class="hero">Élégance & Raffinement</section>
-    <section class="products">
+    <section id="products" class="products">
         <div class="product">
-            <img src="https://source.unsplash.com/400x300/?bracelet" alt="Bracelet">
+            <img src="bracelet.jpg" alt="Bracelet">
             <h3>Bracelet Luxe</h3>
             <p>Un bracelet en or fin pour un look raffiné.</p>
             <a href="#" class="btn">Acheter</a>
         </div>
-        <div class="product">
-            <img src="https://source.unsplash.com/400x300/?ring" alt="Bague">
-            <h3>Bague Élégante</h3>
-            <p>Une bague scintillante pour sublimer votre main.</p>
-            <a href="#" class="btn">Acheter</a>
-        </div>
-        <div class="product">
-            <img src="https://source.unsplash.com/400x300/?earrings" alt="Boucles d'oreilles">
-            <h3>Boucles d'oreilles</h3>
-            <p>Un accessoire chic pour toutes les occasions.</p>
-            <a href="#" class="btn">Acheter</a>
+    </section>
+    <section id="sales" class="sales">
+        <div class="sale-item">
+            <img src="sale-item.jpg" alt="Article en solde">
+            <h3>Promo spéciale</h3>
+            <p>Profitez des meilleures offres sur nos bijoux.</p>
+            <a href="#" class="btn">Découvrir</a>
         </div>
     </section>
-    <footer>© 2025 LALLO Jewelry - Tous droits réservés</footer>
+    <section id="gift-box" class="gift-box">
+        <div class="gift-item">
+            <img src="gift-box.jpg" alt="Box Cadeau">
+            <h3>Box Cadeau</h3>
+            <p>Offrez un coffret unique à vos proches.</p>
+            <a href="#" class="btn">Voir</a>
+        </div>
+    </section>
+    <footer>
+        <p id="contact">Contactez-nous : contact@lallojewelry.com</p>
+        <p id="about">À Propos : Découvrez notre histoire.</p>
+        © 2025 LALLO Jewelry - Tous droits réservés
+    </footer>
 </body>
 </html>
+
 
     <footer>© 2025 LALLO Jewelry - Tous droits réservés</footer>
 </body>
